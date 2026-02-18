@@ -3,16 +3,19 @@ const router = express.Router();
 
 const complaintController = require("../controllers/complaintController");
 
-// Create Complaint (AI integrated)
+// 🔹 Create Complaint (AI Integrated)
 router.post("/", complaintController.createComplaint);
 
-// Get All Complaints
+// 🔹 Get All Complaints
 router.get("/", complaintController.getAllComplaints);
 
-// Dashboard Stats
+// 🔹 Dashboard Stats
 router.get("/dashboard", complaintController.getDashboardStats);
 
-// Update Complaint Status
+// 🔹 Hotspot Detection
+router.get("/hotspots", complaintController.getHotspots);
+
+// 🔹 Update Complaint Status
 router.patch("/:id", complaintController.updateComplaintStatus);
 
 module.exports = router;

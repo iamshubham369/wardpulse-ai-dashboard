@@ -135,3 +135,36 @@ exports.getDashboardStats = async (req, res) => {
     res.status(500).json({ error: error.message });
   }
 };
+// 🔥 HOTSPOT DETECTION
+exports.getHotspots = async (req, res) => {
+  try {
+    const complaints = await Complaint.find();
+
+    const clusters = {};
+
+    complaints.forEach(c => {
+      const [lng, lat] = c.location.coordinates;
+
+      // Round coordinates to group nearby points
+      const key = `${lat.toFixed(3)}_${lng.toFixed(3)}`;
+
+      if (!clusters[key]) {
+        clusters[key] = {
+          lat,
+          lng,
+          count: 0
+        };
+      }
+
+      clusters[key].count += 1;
+    });
+
+    // Only return clusters with 2+ complaints
+    const hotspots = Object.values(clusters).filter(c => c.count >= 2);
+
+    res.json(hotspots);
+
+  } catch (error) {
+    res.status(500).json({ error: error.message });
+  }
+};

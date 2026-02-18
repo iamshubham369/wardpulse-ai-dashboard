@@ -1,0 +1,18 @@
+:root {
+  --bg-dark: #0f1117;
+  --bg-card: #161b22;
+  --bg-hover: #1f2630;
+  --primary: #4f8cff;
+  --danger: #ff4d4f;
+  --success: #00c853;
+  --warning: #faad14;
+  --text-primary: #ffffff;
+  --text-secondary: #a0a8b3;
+}
+
+body {
+  margin: 0;
+  background: var(--bg-dark);
+  font-family: "Inter", sans-serif;
+  color: var(--text-primary);
+}

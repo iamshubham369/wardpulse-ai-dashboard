@@ -1,0 +1,91 @@
+.dashboard-container {
+  padding: 30px;
+  color: #fff;
+}
+
+.dashboard-title {
+  font-size: 28px;
+  font-weight: 600;
+  margin-bottom: 30px;
+}
+
+.kpi-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 20px;
+}
+
+.kpi-card {
+  background: linear-gradient(145deg, #1f1f1f, #111);
+  border-radius: 16px;
+  padding: 20px;
+  box-shadow: 0 10px 30px rgba(0,0,0,0.4);
+  transition: 0.3s ease;
+}
+
+.kpi-card:hover {
+  transform: translateY(-6px);
+}
+
+.kpi-title {
+  font-size: 14px;
+  opacity: 0.7;
+}
+
+.kpi-value {
+  font-size: 30px;
+  font-weight: bold;
+  margin-top: 10px;
+}
+
+.ai-insight {
+  margin-top: 25px;
+  padding: 18px;
+  border-radius: 12px;
+  background: linear-gradient(90deg, #141e30, #243b55);
+}
+
+.chart-grid {
+  margin-top: 40px;
+  display: grid;
+  grid-template-columns: 2fr 1fr;
+  gap: 40px;
+}
+
+.chart-box {
+  background: #121212;
+  padding: 20px;
+  border-radius: 16px;
+}
+
+.table-box {
+  margin-top: 50px;
+  background: #111;
+  border-radius: 16px;
+  padding: 20px;
+}
+
+.table-box table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+.table-box th,
+.table-box td {
+  padding: 12px;
+  text-align: left;
+  border-bottom: 1px solid #222;
+}
+
+.table-box tr:hover {
+  background: #1c1c1c;
+}
+
+.resolve-btn {
+  background: #00c853;
+  border: none;
+  padding: 6px 12px;
+  border-radius: 8px;
+  color: white;
+  cursor: pointer;
+}
